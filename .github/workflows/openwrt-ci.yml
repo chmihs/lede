@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: lede-2
+name: lede-3
 on:
   push:
     branches: 
@@ -196,9 +196,8 @@ jobs:
 
       - name: Make download
         run: |
-          make download -j8 || make download -j1 V=s
-          find ./dl/ -size -1024c -exec rm -f {} \;
-          df -h
+          make download -j8
+          find dl -size -1024c -exec rm -f {} \;
 
       - name: Compile firmware
         run: |
