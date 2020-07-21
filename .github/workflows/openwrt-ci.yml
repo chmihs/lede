@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: lede-1
+name: lede-2
 
 on:
   push:
